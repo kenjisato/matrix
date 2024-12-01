@@ -178,27 +178,7 @@ $$
 
 ベクトル $\boldsymbol{x}$ に行列 $A$ を掛ける操作は次のように分解できる。
 
-$$
-A \boldsymbol{x} = 
-\underbrace{
-    V 
-    \underbrace{
-        |\lambda| 
-        \underbrace{
-                R(-\theta) \underbrace{V^{-1} \boldsymbol{x}
-            }_{
-                \text{$[\alpha\ \beta]$が直交する座標系に変換}
-            }
-        }_{
-            \text{時計回りに $\theta$ だけ回転させる}
-        }
-    }_{
-        \text{倍率 $|\lambda|$ で拡大・縮小}
-    }
-}_{
-    \text{もとの座標系に戻す}
-}
-$$
+![](img/10-math.png)
 
 ここで「時計回り」という言葉づかいには注意をしておこう。 $\alpha$ を第1軸（横軸）、$\beta$ を第2軸（縦軸）としたときに、$\alpha$ から $\beta$ に向かう回転が「反時計回り」、 $\beta$ から $\alpha$ に向かう回転が「時計回り」と定義する。
 

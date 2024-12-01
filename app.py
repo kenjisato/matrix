@@ -10,7 +10,9 @@ app_ui = ui.page_navbar(
     ui_katex,
     app_real.panel("real", "実固有値のケース"),
     app_complex.panel("comp", "複素固有値のケース"),
-    ui.nav_control(),
+    ui.nav_control(
+        ui.a("解説", href="https://github.com/kenjisato/matrix/blob/main/README.md", target="_blank")
+    ),
     title="Dynamics of 2x2 Matrix",
     id="page",
 )
