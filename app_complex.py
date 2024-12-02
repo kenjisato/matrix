@@ -201,6 +201,8 @@ def app_server(input, output, session):
 
     @render.ui
     def show_matrix():
+        req(A)
+
         return ui.tags.table(
             ui.TagList(
                 ui.tags.tr(
@@ -228,12 +230,24 @@ def app_server(input, output, session):
     @reactive.effect
     @reactive.event(input.btn_next)
     def update_trajectory():
+        req(A)
+
         traj = trajectory()
 
         last_coord = traj[-1]
-        new_coord = A() @ np.array(last_coord)
-        traj.append(new_coord)
-        trajectory.set(traj)
+
+        try:
+            new_coord = A() @ np.array(last_coord)
+            traj.append(new_coord)
+            trajectory.set(traj)
+        except:
+            ui.modal_show(
+                ui.modal(ui.markdown("""
+                        ### 固有ベクトルの設定エラー
+                        
+                        青軸と橙軸が平行です！ 
+                        """))
+            )
 
 
     @render.download(filename="plot.png")

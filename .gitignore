@@ -6,5 +6,8 @@ dist/
 wheels/
 *.egg-info
 
+# shiny
+rsconnect-python/
+
 # Virtual environments
 .venv
