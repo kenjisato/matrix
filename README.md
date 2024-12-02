@@ -1,3 +1,5 @@
+https://kjst.shinyapps.io/matrix/
+
 # 行列の固有値と動学
 
 2次正方行列 $A$ が定義する動学システム
